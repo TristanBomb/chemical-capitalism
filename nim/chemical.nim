@@ -2,14 +2,16 @@ import tables
 import macros
 import sequtils
 import strutils
+import options
 
+### ELEMENT INFO DEFINITION ###
 type
     ElementName* = enum
         H = 1
         Li = 3
         B = 5
         C = 6
-        N = 7 
+        N = 7
         O = 8
         Na = 11
         Mg = 12
@@ -23,7 +25,7 @@ type
         charge*: seq[int]
         name*: ElementName
         fullName*: string
-proc elementInfo(charge: seq[int], name: ElementName, fullName: string): ElementInfo = 
+proc elementInfo(charge: seq[int], name: ElementName, fullName: string): ElementInfo =
     return ElementInfo(charge: charge, name: name, fullName: fullName)
 proc getElementInfo(n: ElementName): ElementInfo =
     case n:
@@ -56,6 +58,8 @@ proc getElementInfo(n: ElementName): ElementInfo =
         of Sn:
             return elementInfo(@[4, 2, -4], Sn, "Tin")
 
+
+### ELEMENT DEFINITION ###
 type
     Element* = object
         name*: ElementName
@@ -66,32 +70,17 @@ proc createElement(name: ElementName): Element =
 proc createElement(name: ElementName, count: int): Element =
     return Element(name: name, count: count, info: name.getElementInfo())
 
+
+### CHEMCIAL DEFINITION ###
 type
     Chemical* = object
         elements*: seq[Element]
 
+### REACTION DEFINITION ###
+type
     Reaction* = object
         reactants*: seq[(Chemical, int)]
         products*: seq[(Chemical, int)]
-        
-proc createReaction(reactants: openArray[Chemical], products: openArray[Chemical]): Reaction =
-    let outReactants = reactants.map(proc (c: Chemical): (Chemical, int) = (c, 1))
-    let outProducts = products.map(proc (c: Chemical): (Chemical, int) = (c, 1))
-    return Reaction(reactants: outReactants, products: outProducts)
-    # TODO: ACTUALLY BALANCE THIS REACTION ^^^
-proc `$`(x: Reaction): string =
-    var finalString = ""
-    for _, chem in x.reactants.pairs():
-        for _, el in chem[0].elements.pairs:
-            # TODO: PRINT NUMBERS TOO
-            finalString = finalString & ("$# + " % [$ElementName(el.name)])
-    finalString = finalString & " → "
-    for _, chem in x.products.pairs():
-        for _, el in chem[0].elements.pairs:
-            # TODO: PRINT NUMBERS TOO
-            finalString = finalString & ("$# + " % [$ElementName(el.name)])
-    return finalString
-            
 proc isBalanced(reaction: Reaction): bool =
     var quantityTable: TableRef[ElementName, int] = newTable[ElementName, int]()
     for _, chem in reaction.reactants.pairs():
@@ -106,10 +95,32 @@ proc isBalanced(reaction: Reaction): bool =
         if count != 0:
             return false
     return true;
-    
+proc createReaction(reactants: openArray[(Chemical, int)], products: openArray[(Chemical, int)]): Option[Reaction] =
+    let r: Reaction = Reaction(reactants: @reactants, products: @products)
+    if not r.isBalanced():
+        return none(Reaction)
+    return some(r)
+
+proc `$`(x: Reaction): string =
+    var finalString = ""
+    for _, chem in x.reactants.pairs():
+        for _, el in chem[0].elements.pairs:
+            # TODO: PRINT NUMBERS TOO
+            finalString = finalString & ("$# + " % [$ElementName(el.name)])
+    finalString = finalString & " → "
+    for _, chem in x.products.pairs():
+        for _, el in chem[0].elements.pairs:
+            # TODO: PRINT NUMBERS TOO
+            finalString = finalString & ("$# + " % [$ElementName(el.name)])
+    return finalString
+
 when isMainModule:
     echo $createReaction(
-        [Chemical(elements: @[createElement(O), createElement(C)])],
-        [Chemical(elements: @[createElement(Sn), createElement(Al)])]
+        [
+            (Chemical(elements: @[createElement(C), createElement(O,2)]), 2)
+        ],
+        [
+            (Chemical(elements: @[createElement(C), createElement(O)]), 2),
+            (Chemical(elements: @[createElement(O,2)]), 1)
+        ]
     )
-            
