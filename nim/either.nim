@@ -9,10 +9,10 @@ type
             right*: R
 
 proc Left*[L,R](left: L): Either[L,R] =
-    return Either(lr: leftKind, left: left)
+    return Either[L,R](lr: leftKind, left: left)
 
 proc Right*[L,R](right: R): Either[L,R] =
-    return Either(lr: rightKind, right: right)
+    return Either[L,R](lr: rightKind, right: right)
 
 proc which*[L,R](e: Either[L,R]): LRKind =
     return e.lr

@@ -79,6 +79,15 @@ proc createElement(name: ElementName, count: Positive): Element =
 type
     Chemical* = object
         elements*: seq[Either[Element, (Chemical, Positive)]]
+    ElementQuantities* = TableRef[ElementName, int]
+proc createChemical(elements: seq[Either[Element, (Chemical, Positive)]]): Chemical =
+    return Chemical(elements: elements)
+proc elemChem(eC: ElementName): Either[Element, (Chemical, Positive)] =
+    return Left[Element, (Chemical, Positive)](createElement(eC))
+proc elemChem(eC: ElementName, n: Positive): Either[Element, (Chemical, Positive)] =
+    return Left[Element, (Chemical, Positive)](createElement(eC, n))
+proc elemChem(eC: Chemical, n: Positive): Either[Element, (Chemical, Positive)] =
+    return Right[Element, (Chemical, Positive)]((eC, n))
 proc `$`(x: Chemical): string =
     return
         x
@@ -95,7 +104,19 @@ proc `$`(x: Chemical): string =
                 let e = elemChem.right
                 return "($#)$#" % [$(e[0]), numberToSubscript(e[1])]
         ).foldl("$#$#" % [a, b])
-
+proc getElementQuantities(c: Chemical): ElementQuantities =
+    let quantityTable = newTable[ElementName, int]()
+    for _, elemChem in c.elements.pairs():
+        discard quantityTable[].hasKeyOrPut(elemChem.left.name, 0)
+        case elemChem.which
+        of leftKind:
+            quantityTable[elemChem.left.name] += elemChem.left.count
+        of rightKind:
+            let recursiveTable = getElementQuantities(elemChem.right[0])
+            for name, quantity in recursiveTable.pairs():
+                discard quantityTable[].hasKeyOrPut(name, 0)
+                quantityTable[name] += quantity * elemChem.right[1]
+    return quantityTable
 
 ### REACTION DEFINITION ###
 type
@@ -103,25 +124,17 @@ type
         reactants*: seq[(Chemical, int)]
         products*: seq[(Chemical, int)]
 proc isBalanced(reaction: Reaction): bool =
-    proc getSeqTable(s: seq[(Chemical, int)]): TableRef[ElementName, int] =
-        var quantityTable: TableRef[ElementName, int] = newTable[ElementName, int]()
-        for _, chem in s.pairs():
-            for _, el in chem[0].elements.pairs:
-                case el.which:
-                of leftKind:
-                    discard quantityTable.hasKeyOrPut(ElementName(el[0].name), 0)
-                of rightKind:
-                    #TODO
+    proc mulAddMergeTables[A](a: TableRef[A,int], b: TableRef[A,int], m: int) =
+        for k, v in b.pairs():
+            if not a.hasKey(k):
+                a[k] = 0
+            a[k] += v * m
 
     var quantityTable: TableRef[ElementName, int] = newTable[ElementName, int]()
-    for _, chem in reaction.reactants.pairs():
-        for _, el in chem[0].elements.pairs:
-            discard quantityTable.hasKeyOrPut(ElementName(el.name), 0)
-            quantityTable[ElementName(el.name)] += chem[1] * el.count
-    for _, chem in reaction.products.pairs():
-        for _, el in chem[0].elements.pairs:
-            discard quantityTable.hasKeyOrPut(ElementName(el.name), 0)
-            quantityTable[ElementName(el.name)] -= chem[1] * el.count
+    for chem in reaction.reactants.items():
+        quantityTable.mulAddMergeTables(getElementQuantities(chem[0]), chem[1])
+    for chem in reaction.products.items():
+        quantityTable.mulAddMergeTables(getElementQuantities(chem[0]), -chem[1])
     for count in quantityTable.values:
         if count != 0:
             return false
@@ -150,10 +163,10 @@ proc `$`(x: Reaction): string =
 when isMainModule:
     echo $createReaction(
         [
-            (Chemical(elements: @[createElement(C), createElement(O,2)]), 2)
+            (createChemical(@[elemChem(C), elemChem(O,2)]), 2)
         ],
         [
-            (Chemical(elements: @[createElement(C), createElement(O)]), 2),
-            (Chemical(elements: @[createElement(O,2)]), 1)
+            (createChemical(@[elemChem(C), elemChem(O)]), 2),
+            (createChemical(@[elemChem(O,2)]), 1)
         ]
     )
