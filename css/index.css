@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:400,400i,500');
+
+:root {
+    /* Color definitions */
+	--bg: #ffffff;
+	--bg-alt: #f0f0f0;
+	--text: #1a1a1a;
+    --bar: 808080;
+}
+
+* {
+    box-sizing: border-box; /* Why the hell isn't this the default, W3C? */
+    font-family: "Lato";
+    font-size: 24pt;
+}
+
+body {
+    background-color: var(--bg-alt);
+	margin: 0;
+	height: 100%;
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-size: 36pt;
+    font-weight: 500;
+	margin: 0;
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-size: 24pt;
+    font-weight: 400;
+    font-style: italic;
+	margin: 0;
+}
+
+div.page-container {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+div.titlebar {
+    background-color: var(--bg);
+    height: 10vh;
+    width: auto;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    text-align: center;
+}
+
+div.navpane-container {
+	display: flex;
+	flex-flow: row;
+    flex: auto;
+    background-color: #232324;
+	border-width: 4px;
+}
+
+div.navpane {
+	flex: 0 1 100%;
+	padding: 0.2em;
+	min-width: 0;
+	overflow: auto;
+	border-width: 4px;
+	border-style: solid;
+	border-color: var(--bg);
+	background-color: var(--bg-alt);
+}
