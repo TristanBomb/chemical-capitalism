@@ -4,6 +4,10 @@ import sequtils
 import strutils
 import options
 
+# My libraries
+import unicode_numbers
+import either
+
 ### ELEMENT INFO DEFINITION ###
 type
     ElementName* = enum
@@ -63,18 +67,35 @@ proc getElementInfo(n: ElementName): ElementInfo =
 type
     Element* = object
         name*: ElementName
-        count*: int
+        count*: Positive
         info*: ElementInfo
 proc createElement(name: ElementName): Element =
     return Element(name: name, count: 1, info: name.getElementInfo())
-proc createElement(name: ElementName, count: int): Element =
+proc createElement(name: ElementName, count: Positive): Element =
     return Element(name: name, count: count, info: name.getElementInfo())
 
 
 ### CHEMCIAL DEFINITION ###
 type
     Chemical* = object
-        elements*: seq[Element]
+        elements*: seq[Either[Element, (Chemical, Positive)]]
+proc `$`(x: Chemical): string =
+    return
+        x
+        .elements
+        .map(proc(elemChem: Either[Element, (Chemical, Positive)]): string =
+            case elemChem.which:
+            of leftKind:
+                let c = elemChem.left
+                if (c.count != 1):
+                    return "$#$#" % [$ElementName(c.name), numberToSubscript(c.count)]
+                else:
+                    return $ElementName(c.name)
+            of rightKind:
+                let e = elemChem.right
+                return "($#)$#" % [$(e[0]), numberToSubscript(e[1])]
+        ).foldl("$#$#" % [a, b])
+
 
 ### REACTION DEFINITION ###
 type
@@ -82,6 +103,16 @@ type
         reactants*: seq[(Chemical, int)]
         products*: seq[(Chemical, int)]
 proc isBalanced(reaction: Reaction): bool =
+    proc getSeqTable(s: seq[(Chemical, int)]): TableRef[ElementName, int] =
+        var quantityTable: TableRef[ElementName, int] = newTable[ElementName, int]()
+        for _, chem in s.pairs():
+            for _, el in chem[0].elements.pairs:
+                case el.which:
+                of leftKind:
+                    discard quantityTable.hasKeyOrPut(ElementName(el[0].name), 0)
+                of rightKind:
+                    #TODO
+
     var quantityTable: TableRef[ElementName, int] = newTable[ElementName, int]()
     for _, chem in reaction.reactants.pairs():
         for _, el in chem[0].elements.pairs:
@@ -102,18 +133,20 @@ proc createReaction(reactants: openArray[(Chemical, int)], products: openArray[(
     return some(r)
 
 proc `$`(x: Reaction): string =
-    var finalString = ""
-    for _, chem in x.reactants.pairs():
-        for _, el in chem[0].elements.pairs:
-            # TODO: PRINT NUMBERS TOO
-            finalString = finalString & ("$# + " % [$ElementName(el.name)])
-    finalString = finalString & " → "
-    for _, chem in x.products.pairs():
-        for _, el in chem[0].elements.pairs:
-            # TODO: PRINT NUMBERS TOO
-            finalString = finalString & ("$# + " % [$ElementName(el.name)])
-    return finalString
+    let
+        reactantString: string =
+            x
+            .reactants
+            .map(proc(c: (Chemical, int)): string = $(c[0]))
+            .foldl("$# + $#" % [a, b])
+        productString: string =
+            x
+            .products
+            .map(proc(c: (Chemical, int)): string = $(c[0]))
+            .foldl("$# + $#" % [a, b])
+    return (reactantString & " → " & productString)
 
+# Just show a little test
 when isMainModule:
     echo $createReaction(
         [
