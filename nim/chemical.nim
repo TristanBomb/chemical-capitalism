@@ -97,12 +97,12 @@ proc `$`(x: Chemical): string =
             of leftKind:
                 let c = elemChem.left
                 if (c.count != 1):
-                    return "$#$#" % [$ElementName(c.name), numberToSubscript(c.count)]
+                    return "$#$#" % [$ElementName(c.name), c.count.toSubscript()]
                 else:
                     return $ElementName(c.name)
             of rightKind:
                 let e = elemChem.right
-                return "($#)$#" % [$(e[0]), numberToSubscript(e[1])]
+                return "($#)$#" % [$(e[0]), e[1].toSubscript()]
         ).foldl("$#$#" % [a, b])
 proc getElementQuantities(c: Chemical): ElementQuantities =
     let quantityTable = newTable[ElementName, int]()

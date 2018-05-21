@@ -1,6 +1,9 @@
 import strutils
 
-proc numberToSubscript*(n: int): string =
+proc `$`[T](x: Ordinal[T]): string =
+    return $int(x)
+
+proc toSubscript*(num: Ordinal | float): string =
     let nums = [
         ("0", "₀"),
         ("1", "₁"),
@@ -11,6 +14,27 @@ proc numberToSubscript*(n: int): string =
         ("6", "₆"),
         ("7", "₇"),
         ("8", "₈"),
-        ("9", "₉")
+        ("9", "₉"),
+        ("-", "₋"),
+        ("+", "₊"),
+        (".", " ̣")
     ]
-    return ($n).multiReplace(nums)
+    return ($num).multiReplace(nums)
+
+proc toSuperscript*(num: Ordinal | float): string =
+    let nums = [
+        ("0", "₀"),
+        ("1", "¹"),
+        ("2", "²"),
+        ("3", "³"),
+        ("4", "⁴"),
+        ("5", "⁵"),
+        ("6", "⁶"),
+        ("7", "⁷"),
+        ("8", "⁸"),
+        ("9", "⁹"),
+        ("-", "⁻"),
+        ("+", "⁺"),
+        (".", "⋅")
+    ]
+    return ($num).multiReplace(nums)
