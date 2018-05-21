@@ -6,12 +6,12 @@
 	--bg-alt: #f0f0f0;
 	--text: #1a1a1a;
     --bar: 808080;
+	font-size: 16pt;
 }
 
 * {
     box-sizing: border-box; /* Why the hell isn't this the default, W3C? */
     font-family: "Lato";
-    font-size: 24pt;
 }
 
 body {
@@ -22,14 +22,14 @@ body {
 
 h1 {
     font-family: "Montserrat";
-    font-size: 36pt;
+    font-size: 2.25rem;
     font-weight: 500;
 	margin: 0;
 }
 
 h2 {
     font-family: "Montserrat";
-    font-size: 24pt;
+    font-size: 1.5rem;
     font-weight: 400;
     font-style: italic;
 	margin: 0;
@@ -45,8 +45,8 @@ div.titlebar {
     background-color: var(--bg);
     height: 10vh;
     width: auto;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
     text-align: center;
 }
 
@@ -60,11 +60,84 @@ div.navpane-container {
 
 div.navpane {
 	flex: 0 1 100%;
-	padding: 0.2em;
+	padding: 0.5em;
 	min-width: 0;
 	overflow: auto;
 	border-width: 4px;
 	border-style: solid;
 	border-color: var(--bg);
 	background-color: var(--bg-alt);
+}
+
+div.item-header {
+	user-select: none;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	width: 100%;
+}
+
+img.arrow {
+	width: 1.3rem;
+	margin-right: 0.5em;
+	transition: transform, 0.5s ease;
+}
+
+img.arrow.inverted {
+	transform: scaleY(-1);
+}
+
+div.item-container {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	width: auto;
+	min-width: 10em;
+	max-width: 100%;
+	overflow: hidden;
+	transition: 0.5s ease;
+}
+
+div.item {
+	background-color: var(--bg);
+	height: 3.5em;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+div.item-icon-container {
+	float: left;
+	margin-right: 0.5em;
+	color: var(--bg);
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	background-color: var(--text);
+	overflow: hidden;
+	line-height: 3.5em;
+	height: 3.5em;
+	width: 3.5em;
+}
+
+span.item-icon {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+div.item-contents {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 3.5em;
+}
+
+div.item-title {
+	vertical-align: bottom;
+	overflow: hidden;
+	font-weight: 400;
+}
+
+div.item-desc {
+	vertical-align: top;
+	overflow: hidden;
+	font-weight: 300;
 }
