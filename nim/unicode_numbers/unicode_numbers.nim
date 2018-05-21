@@ -17,7 +17,8 @@ proc toSubscript*(num: Ordinal | float): string =
         ("9", "₉"),
         ("-", "₋"),
         ("+", "₊"),
-        (".", " ̣")
+        #(".", " ̣")
+        (".", ".")
     ]
     return ($num).multiReplace(nums)
 
