@@ -1,5 +1,8 @@
 import tables
 import rationals
+import dom
+import sequtils
+import strutils
 
 import chemical
 
@@ -8,6 +11,8 @@ type
     GameResource = object of RootObj
         units: string
         value: Rational[int]
+proc `$`(x: GameResource): string =
+    return "Resource with units $# and value $#" % [$x.units, $x.value]
 
 # All the resources defined as types
 type
@@ -39,3 +44,16 @@ type
         energy: Energy
         science: Science
         elements: Elements
+proc `$`(x: GameState): string =
+    return (
+        """State(
+            money:    $#
+            energy:   $#
+            science:  $#
+            elements: $#
+        )""" % [$x.money, $x.energy, $x.science, $x.elements]
+    )
+
+when isMainModule:
+    let state: GameState = GameState(money: newMoney(), energy: newEnergy(), science: newScience(), elements: newElements())
+    alert(cstring($state))
