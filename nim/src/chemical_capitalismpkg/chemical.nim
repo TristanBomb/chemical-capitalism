@@ -106,12 +106,12 @@ proc `$`(x: Chemical): string =
                 return "($#)$#" % [$(e[0]), e[1].toSubscript()]
         ).foldl("$#$#" % [a, b])
 proc stringToChemical(s: string) = 
-    let pegGrammar = peg"""
-    Chemical <- ('(' Chemical ')' [0-9]* / Element*)*
-    Element <- [A-Z][a-z]?[a-z]?[0-9]*
-    """
+    let pegGrammar = term("""
+    Chemical <- ('(' Chemical ')' \d* / Element*)*
+    Element <- [A-Z][a-z]?[a-z]?\d*
+    """)
     if s =~ pegGrammar:
-        echo matches
+        echo "my matches: ", matches
     else:
         echo "no matches"
 proc getElementQuantities(c: Chemical): ElementQuantities =
@@ -171,7 +171,7 @@ proc `$`(x: Reaction): string =
 
 # Just show a little test
 when isMainModule:
-    echo $createReaction(
+    echo($createReaction(
         [
             (createChemical(@[elemChem(C), elemChem(O,2)]), 2)
         ],
@@ -179,6 +179,7 @@ when isMainModule:
             (createChemical(@[elemChem(C), elemChem(O)]), 2),
             (createChemical(@[elemChem(O,2)]), 1)
         ]
-    )
+    ))
     stringToChemical("CoOF3")
     stringToChemical("FOO8OOOF(FOOF(FOF(FOOP)3))")
+    stringToChemical("??????????")
