@@ -1,7 +1,7 @@
 all:
 	nimble build
-	cp chemical_capitalism main.js
+	cp chemical_capitalism ../js/nim_main.js
 
 clean:
-	-rm main.js
+	-rm ../js/nim_main.js
 	-rm chemical_capitalism

@@ -4,7 +4,7 @@ import dom
 import sequtils
 import strutils
 
-import chemical
+import chemical_capitalismpkg/chemical
 
 # The parent concept for all resources in the game
 type
