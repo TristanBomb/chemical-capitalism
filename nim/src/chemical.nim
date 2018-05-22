@@ -5,7 +5,7 @@ import strutils
 import options
 
 # My libraries
-import unicode_numbers/unicode_numbers
+import unicode_numbers
 import either
 
 ### ELEMENT INFO DEFINITION ###

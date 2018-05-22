@@ -8,7 +8,7 @@ import chemical
 
 # The parent concept for all resources in the game
 type
-    GameResource = object of RootObj
+    GameResource = ref object of RootObj
         units: string
         value: Rational[int]
 proc `$`(x: GameResource): string =
@@ -56,4 +56,4 @@ proc `$`(x: GameState): string =
 
 when isMainModule:
     let state: GameState = GameState(money: newMoney(), energy: newEnergy(), science: newScience(), elements: newElements())
-    alert(cstring($state))
+    window.alert($state)
