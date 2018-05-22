@@ -3,6 +3,7 @@ import macros
 import sequtils
 import strutils
 import options
+import pegs
 
 # My libraries
 import unicode_numbers
@@ -104,6 +105,15 @@ proc `$`(x: Chemical): string =
                 let e = elemChem.right
                 return "($#)$#" % [$(e[0]), e[1].toSubscript()]
         ).foldl("$#$#" % [a, b])
+proc stringToChemical(s: string) = 
+    let pegGrammar = peg"""
+    Chemical <- ('(' Chemical ')' [0-9]* / Element*)*
+    Element <- [A-Z][a-z]?[a-z]?[0-9]*
+    """
+    if s =~ pegGrammar:
+        echo matches
+    else:
+        echo "no matches"
 proc getElementQuantities(c: Chemical): ElementQuantities =
     let quantityTable = newTable[ElementName, int]()
     for _, elemChem in c.elements.pairs():
@@ -170,3 +180,5 @@ when isMainModule:
             (createChemical(@[elemChem(O,2)]), 1)
         ]
     )
+    stringToChemical("CoOF3")
+    stringToChemical("FOO8OOOF(FOOF(FOF(FOOP)3))")
