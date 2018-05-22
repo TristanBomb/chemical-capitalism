@@ -1,28 +1,98 @@
 <html>
-<head>
+<head lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
     <title>Chemical Capitalism</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:400,400i,500" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="icon" type="x-icon" href="assets/icon.png">
 </head>
 <body>
     <div class="page-container">
-    <div class="titlebar">
-        <img src="assets/logo.svg" style="height:100%;"/>
-    </div>
-    <div class="navpane-container">
-        <div class="navpane" id="machine-pane">
-            <h1>Machines</h1>
-            <h2>Importers</h2>
-            <div class="item-container" id="importers">
-                <div class="item">
+        <div class="titlebar">
+            <img src="assets/logo.svg" style="height:100%;"/>
+        </div>
+
+        <div class="navpane-container">
+            <div class="navpane" id="machine-pane">
+                <h1>Machines</h1>
+                <div class="section-desc">Machines automatically and periodically complete some task.</div>
+                <div class="section" id="importers" name="Importers">
+                    <div class="section-desc">Importers buy resources from the outside world.</div>
+                </div>
+                <div class="section" id="exporters" name="Exporters">
+                    <div class="section-desc">Exports sell resources to the outside world.</div>
+                </div>
+                <div class="section" id="chemreac" name="Chemical Reactors">
+                    <div class="section-desc">Chemical reactors transform resources into other resources via chemical reactions.</div>
+                </div>
+                <div class="section" id="nukereac" name="Nuclear Reactors">
+                    <div class="section-desc">Nuclear reactors transform elements into other elements via nuclear processes.</div>
+                </div>
+                <div class="section" id="labs" name="Laboratories">
+                    <div class="section-desc">Laboratories use resources to produce science.</div>
+                </div>
+            </div>
+
+            <div class="navpane" id="inventory-pane">
+                <h1>Resources</h1>
+                <div class="section-desc">Resources are things you can own, use, process, buy, or sell.</div>
+                <div class="section" id="basics" name="Basics">
+                    <div class="section-desc">Basic resources are the core of your business and affect almost everything you do.</div>
+                    <div class="item">
+                        <div class="item-icon-container" style="background-color: #482">
+                            <span class="item-icon">$</span>
+                        </div>
+                        <div class="item-contents">
+                            <div class="item-title">Money</div>
+                            <div class="item-desc">1,000,000</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-icon-container" style="background-color: #a42">
+                            <span class="item-icon">kJ</span>
+                        </div>
+                        <div class="item-contents">
+                            <div class="item-title">Energy</div>
+                            <div class="item-desc">1,000</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-icon-container" style="background-color: #28a">
+                            <span class="item-icon">Sci</span>
+                        </div>
+                        <div class="item-contents">
+                            <div class="item-title">Science</div>
+                            <div class="item-desc">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="elements" name="Elements">
+                    <div class="section-desc">The elements of the Periodic Table form the building blocks of our world.</div>
+                </div>
+                <div class="section" id="compounds" name="Compounds">
+                    <div class="section-desc">Compounds are combinations of elements to form a wider variety of substances.</div>
+                </div>
+            </div>
+
+            <div class="navpane" id="research-pane">
+                <h1>Research</h1>
+                <div class="section" id="chemistry" name="Chemistry">
+                    <div class="section-desc">Chemistry research progresses your ability to interact with elements and molecules.</div>
+                </div>
+                <div class="section" id="physics" name="Physics">
+                    <div class="section-desc">Physics research progresses your ability to interact with the subatomic.</div>
+                </div>
+                <div class="section" id="engineering" name="Engineering">
+                    <div class="section-desc">Engineering research focuses on incremental improvements to designs or on power generation.</div>
+                </div>
+                <div class="section" id="society" name="Society">
+                    <div class="section-desc">Social research helps you interact with society, administration, and the economy.</div>
                 </div>
             </div>
         </div>
-        <div class="navpane" id="inventory-pane">
-        </div>
-        <div class="navpane" id="research-pane">
-        </div>
     </div>
-    </div>
+    <script src="js/populate_panels.js"></script>
 </body>
 </html>
