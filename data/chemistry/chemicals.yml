@@ -1,0 +1,821 @@
+# Thanks to OpenStax Chemistry for this data, and thanks to Regex for not making it living hell to store
+Al:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 28.3
+Al2O3:
+  enthalpy: -1676.0
+  free-energy: -1582.0
+  entropy: 50.92
+AlF3:
+  enthalpy: -1510.4
+  free-energy: -1425.0
+  entropy: 66.5
+AlCl3:
+  enthalpy: -704.2
+  free-energy: -628.8
+  entropy: 110.67
+Al2S3:
+  enthalpy: -724.0
+  free-energy: -492.4
+  entropy: 116.9
+Al2(SO4)3:
+  enthalpy: -3445.06
+  free-energy: -3506.61
+  entropy: 239.32
+Sb:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 45.69
+Sb4O6:
+  enthalpy: -1440.55
+  free-energy: -1268.17
+  entropy: 220.92
+SbCl3:
+  enthalpy: -382.17
+  free-energy: -323.72
+  entropy: 184.1
+SbCl5:
+  enthalpy: -394.34
+  free-energy: -334.29
+  entropy: 401.94
+Sb2S3:
+  enthalpy: -174.89
+  free-energy: -173.64
+  entropy: 182.0
+As:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 35.1
+As4:
+  enthalpy: 143.9
+  free-energy: 92.4
+  entropy: 314.0
+As4O6:
+  enthalpy: -1313.94
+  free-energy: -1152.52
+  entropy: 214.22
+As2O5:
+  enthalpy: -924.87
+  free-energy: -782.41
+  entropy: 105.44
+AsCl3:
+  enthalpy: -261.5
+  free-energy: -248.95
+  entropy: 327.06
+As2S3:
+  enthalpy: -169.03
+  free-energy: -168.62
+  entropy: 163.59
+AsH3:
+  enthalpy: 66.44
+  free-energy: 68.93
+  entropy: 222.78
+Ba:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 62.5
+BaO:
+  enthalpy: -548.0
+  free-energy: -520.3
+  entropy: 72.1
+BaCl2:
+  enthalpy: -855.0
+  free-energy: -806.7
+  entropy: 123.7
+BaSO4:
+  enthalpy: -1473.2
+  free-energy: -1362.3
+  entropy: 132.2
+Be:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 9.5
+BeO:
+  enthalpy: -609.4
+  free-energy: -580.1
+  entropy: 13.8
+Bi:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 56.74
+Bi2O3:
+  enthalpy: -573.88
+  free-energy: -493.7
+  entropy: 151.5
+BiCl3:
+  enthalpy: -379.07
+  free-energy: -315.06
+  entropy: 176.98
+Bi2S3:
+  enthalpy: -143.1
+  free-energy: -140.6
+  entropy: 200.4
+B:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 5.86
+B2O3:
+  enthalpy: -1273.5
+  free-energy: -1194.3
+  entropy: 53.97
+B2H6:
+  enthalpy: 36.4
+  free-energy: 87.6
+  entropy: 232.1
+H3BO3:
+  enthalpy: -1094.33
+  free-energy: -968.92
+  entropy: 88.83
+BF3:
+  enthalpy: -1136.0
+  free-energy: -1119.4
+  entropy: 254.4
+BCl3:
+  enthalpy: -403.8
+  free-energy: -388.7
+  entropy: 290.1
+B3N3H6:
+  enthalpy: -540.99
+  free-energy: -392.79
+  entropy: 199.58
+HBO2:
+  enthalpy: -794.25
+  free-energy: -723.41
+  entropy: 37.66
+Br2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 152.23
+Br:
+  enthalpy: 111.88
+  free-energy: 82.429
+  entropy: 175.0
+BrF3:
+  enthalpy: -255.6
+  free-energy: -229.45
+  entropy: 292.42
+HBr:
+  enthalpy: -36.3
+  free-energy: -53.43
+  entropy: 198.7
+Cd:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 51.76
+CdO:
+  enthalpy: -258.2
+  free-energy: -228.4
+  entropy: 54.8
+CdCl2:
+  enthalpy: -391.5
+  free-energy: -343.9
+  entropy: 115.3
+CdSO4:
+  enthalpy: -933.3
+  free-energy: -822.7
+  entropy: 123.0
+CdS:
+  enthalpy: -161.9
+  free-energy: -156.5
+  entropy: 64.9
+Ca:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 41.6
+CaO:
+  enthalpy: -634.9
+  free-energy: -603.3
+  entropy: 38.1
+Ca(OH)2:
+  enthalpy: -985.2
+  free-energy: -897.5
+  entropy: 83.4
+CaSO4:
+  enthalpy: -1434.5
+  free-energy: -1322.0
+  entropy: 106.5
+CaCO3:
+  enthalpy: -1220.0
+  free-energy: -1081.4
+  entropy: 110.0
+C:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 5.74
+CO:
+  enthalpy: -110.52
+  free-energy: -137.15
+  entropy: 197.7
+CO2:
+  enthalpy: -393.51
+  free-energy: -394.36
+  entropy: 213.8
+CH4:
+  enthalpy: -74.6
+  free-energy: -50.5
+  entropy: 186.3
+CH3OH:
+  enthalpy: -239.2
+  free-energy: -166.6
+  entropy: 126.8
+CCl4:
+  enthalpy: -128.2
+  free-energy: -62.5
+  entropy: 214.4
+CHCl3:
+  enthalpy: -134.1
+  free-energy: -73.7
+  entropy: 201.7
+CS2:
+  enthalpy: 89.7
+  free-energy: 65.27
+  entropy: 151.34
+C2H2:
+  enthalpy: 227.4
+  free-energy: 209.2
+  entropy: 200.9
+C2H4:
+  enthalpy: 52.4
+  free-energy: 68.4
+  entropy: 219.3
+C2H6:
+  enthalpy: -84.0
+  free-energy: -32.0
+  entropy: 229.2
+CH3CO2H:
+  enthalpy: -484.3
+  free-energy: -389.9
+  entropy: 159.8
+C2H5OH:
+  enthalpy: -277.6
+  free-energy: -174.8
+  entropy: 160.7
+C3H8:
+  enthalpy: -103.8
+  free-energy: -23.4
+  entropy: 270.3
+C6H6:
+  enthalpy: 49.1
+  free-energy: 124.5
+  entropy: 173.4
+CH2Cl2:
+  enthalpy: -124.2
+  free-energy: -63.2
+  entropy: 177.8
+CH3Cl:
+  enthalpy: -81.9
+  free-energy: -60.2
+  entropy: 234.6
+C2H5Cl:
+  enthalpy: -136.52
+  free-energy: -59.31
+  entropy: 190.79
+C2N2:
+  enthalpy: 308.98
+  free-energy: 297.36
+  entropy: 241.9
+HCN:
+  enthalpy: 108.9
+  free-energy: 125.0
+  entropy: 112.8
+Cl2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 223.1
+Cl:
+  enthalpy: 121.3
+  free-energy: 105.7
+  entropy: 165.2
+ClF:
+  enthalpy: -54.48
+  free-energy: -55.94
+  entropy: 217.78
+ClF3:
+  enthalpy: -158.99
+  free-energy: -118.83
+  entropy: 281.5
+Cl2O:
+  enthalpy: 80.3
+  free-energy: 97.9
+  entropy: 266.2
+HCl:
+  enthalpy: -92.307
+  free-energy: -95.299
+  entropy: 186.9
+Cr:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 23.77
+Cr2O3:
+  enthalpy: -1139.7
+  free-energy: -1058.1
+  entropy: 81.2
+Co:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 30.0
+CoO:
+  enthalpy: -237.9
+  free-energy: -214.2
+  entropy: 52.97
+Co3O4:
+  enthalpy: -910.02
+  free-energy: -794.98
+  entropy: 114.22
+Cu:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 33.15
+CuO:
+  enthalpy: -157.3
+  free-energy: -129.7
+  entropy: 42.63
+Cu2O:
+  enthalpy: -168.6
+  free-energy: -146.0
+  entropy: 93.14
+CuS:
+  enthalpy: -53.1
+  free-energy: -53.6
+  entropy: 66.5
+Cu2S:
+  enthalpy: -79.5
+  free-energy: -86.2
+  entropy: 120.9
+CuSO4:
+  enthalpy: -771.36
+  free-energy: -662.2
+  entropy: 109.2
+F2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 202.8
+F:
+  enthalpy: 79.4
+  free-energy: 62.3
+  entropy: 158.8
+F2O:
+  enthalpy: 24.7
+  free-energy: 41.9
+  entropy: 247.43
+HF:
+  enthalpy: -273.3
+  free-energy: -275.4
+  entropy: 173.8
+H2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 130.7
+H:
+  enthalpy: 217.97
+  free-energy: 203.26
+  entropy: 114.7
+H2O:
+  enthalpy: -285.83
+  free-energy: -237.1
+  entropy: 70.0
+H2O2:
+  enthalpy: -187.78
+  free-energy: -120.35
+  entropy: 109.6
+HI:
+  enthalpy: 26.48
+  free-energy: 1.7
+  entropy: 206.59
+H2S:
+  enthalpy: -20.6
+  free-energy: -33.4
+  entropy: 205.8
+H2Se:
+  enthalpy: 29.7
+  free-energy: 15.9
+  entropy: 219.0
+I2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 116.14
+I:
+  enthalpy: 106.84
+  free-energy: 70.2
+  entropy: 180.8
+IF:
+  enthalpy: 95.65
+  free-energy: -118.49
+  entropy: 236.06
+ICl:
+  enthalpy: 17.78
+  free-energy: -5.44
+  entropy: 247.44
+IBr:
+  enthalpy: 40.84
+  free-energy: 3.72
+  entropy: 258.66
+IF7:
+  enthalpy: -943.91
+  free-energy: -818.39
+  entropy: 346.44
+Fe:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 27.3
+Fe2O3:
+  enthalpy: -824.2
+  free-energy: -742.2
+  entropy: 87.4
+Fe3O4:
+  enthalpy: -1118.4
+  free-energy: -1015.4
+  entropy: 146.4
+Fe(CO)5:
+  enthalpy: -774.04
+  free-energy: -705.42
+  entropy: 338.07
+FeCl2:
+  enthalpy: -341.79
+  free-energy: -302.3
+  entropy: 117.95
+FeCl3:
+  enthalpy: -399.49
+  free-energy: -334.0
+  entropy: 142.3
+FeO:
+  enthalpy: -272.0
+  free-energy: -255.2
+  entropy: 60.75
+Fe(OH)2:
+  enthalpy: -569.0
+  free-energy: -486.5
+  entropy: 88.0
+Fe(OH)3:
+  enthalpy: -823.0
+  free-energy: -696.5
+  entropy: 106.7
+FeS:
+  enthalpy: -100.0
+  free-energy: -100.4
+  entropy: 60.29
+Fe3C:
+  enthalpy: 25.1
+  free-energy: 20.08
+  entropy: 104.6
+Pb:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 64.81
+PbO:
+  enthalpy: -218.99
+  free-energy: -188.93
+  entropy: 66.5
+PbS:
+  enthalpy: -100.4
+  free-energy: -98.7
+  entropy: 91.2
+PbO2:
+  enthalpy: -277.4
+  free-energy: -217.3
+  entropy: 68.6
+PbCl2:
+  enthalpy: -359.4
+  free-energy: -314.1
+  entropy: 136.0
+Li:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 29.1
+LiH:
+  enthalpy: -90.5
+  free-energy: -68.3
+  entropy: 20.0
+Li(OH):
+  enthalpy: -487.5
+  free-energy: -441.5
+  entropy: 42.8
+LiF:
+  enthalpy: -616.0
+  free-energy: -587.5
+  entropy: 35.7
+Li2CO3:
+  enthalpy: -1216.04
+  free-energy: -1132.19
+  entropy: 90.17
+Mn:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 32.0
+MnO:
+  enthalpy: -385.2
+  free-energy: -362.9
+  entropy: 59.71
+MnO2:
+  enthalpy: -520.03
+  free-energy: -465.1
+  entropy: 53.05
+Mn2O3:
+  enthalpy: -958.97
+  free-energy: -881.15
+  entropy: 110.46
+Mn3O4:
+  enthalpy: -1378.83
+  free-energy: -1283.23
+  entropy: 155.64
+Hg:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 75.9
+HgO:
+  enthalpy: -90.83
+  free-energy: -58.5
+  entropy: 70.29
+HgCl2:
+  enthalpy: -224.3
+  free-energy: -178.6
+  entropy: 146.0
+Hg2Cl2:
+  enthalpy: -265.4
+  free-energy: -210.7
+  entropy: 191.6
+HgS:
+  enthalpy: -58.16
+  free-energy: -50.6
+  entropy: 82.4
+HgSO4:
+  enthalpy: -707.51
+  free-energy: -594.13
+  entropy: 0.0
+N2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 191.6
+N:
+  enthalpy: 472.704
+  free-energy: 455.5
+  entropy: 153.3
+'NO':
+  enthalpy: 90.25
+  free-energy: 87.6
+  entropy: 210.8
+NO2:
+  enthalpy: 33.2
+  free-energy: 51.3
+  entropy: 240.1
+N2O:
+  enthalpy: 81.6
+  free-energy: 103.7
+  entropy: 220.0
+N2O3:
+  enthalpy: 83.72
+  free-energy: 139.41
+  entropy: 312.17
+N2O4:
+  enthalpy: 11.1
+  free-energy: 99.8
+  entropy: 304.4
+N2O5:
+  enthalpy: 11.3
+  free-energy: 115.1
+  entropy: 355.7
+NH3:
+  enthalpy: -45.9
+  free-energy: -16.5
+  entropy: 192.8
+N2H4:
+  enthalpy: 50.63
+  free-energy: 149.43
+  entropy: 121.21
+NH4NO3:
+  enthalpy: -365.56
+  free-energy: -183.87
+  entropy: 151.08
+NH4Cl:
+  enthalpy: -314.43
+  free-energy: -202.87
+  entropy: 94.6
+NH4Br:
+  enthalpy: -270.8
+  free-energy: -175.2
+  entropy: 113.0
+NH4I:
+  enthalpy: -201.4
+  free-energy: -112.5
+  entropy: 117.0
+HNO3:
+  enthalpy: -174.1
+  free-energy: -80.7
+  entropy: 155.6
+O2:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 205.2
+O:
+  enthalpy: 249.17
+  free-energy: 231.7
+  entropy: 161.1
+O3:
+  enthalpy: 142.7
+  free-energy: 163.2
+  entropy: 238.9
+P4:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 164.4
+P:
+  enthalpy: 314.64
+  free-energy: 278.25
+  entropy: 163.19
+PH3:
+  enthalpy: 5.4
+  free-energy: 13.5
+  entropy: 210.2
+PCl3:
+  enthalpy: -287.0
+  free-energy: -267.8
+  entropy: 311.78
+PCl5:
+  enthalpy: -374.9
+  free-energy: -305.0
+  entropy: 364.4
+P4O10:
+  enthalpy: -2984.0
+  free-energy: -2697.0
+  entropy: 228.86
+H3PO4:
+  enthalpy: -1279.0
+  free-energy: -1119.1
+  entropy: 110.5
+POCl3:
+  enthalpy: -597.1
+  free-energy: -520.8
+  entropy: 222.5
+K:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 64.7
+KF:
+  enthalpy: -576.27
+  free-energy: -537.75
+  entropy: 66.57
+KCl:
+  enthalpy: -436.5
+  free-energy: -408.5
+  entropy: 82.6
+Si:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 18.8
+SiO2:
+  enthalpy: -910.7
+  free-energy: -856.3
+  entropy: 41.5
+SiH4:
+  enthalpy: 34.3
+  free-energy: 56.9
+  entropy: 204.6
+H2SiO3:
+  enthalpy: -1188.67
+  free-energy: -1092.44
+  entropy: 133.89
+H4SiO4:
+  enthalpy: -1481.14
+  free-energy: -1333.02
+  entropy: 192.46
+SiF4:
+  enthalpy: -1615.0
+  free-energy: -1572.8
+  entropy: 282.8
+SiCl4:
+  enthalpy: -687.0
+  free-energy: -619.8
+  entropy: 239.7
+SiC:
+  enthalpy: -73.22
+  free-energy: -70.71
+  entropy: 16.61
+Ag:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 42.55
+Ag2O:
+  enthalpy: -31.05
+  free-energy: -11.2
+  entropy: 121.3
+AgCl:
+  enthalpy: -127.0
+  free-energy: -109.8
+  entropy: 96.3
+Ag2S:
+  enthalpy: -32.6
+  free-energy: -40.7
+  entropy: 144.0
+Na:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 51.3
+Na2O:
+  enthalpy: -414.2
+  free-energy: -375.5
+  entropy: 75.1
+NaCl:
+  enthalpy: -411.2
+  free-energy: -384.1
+  entropy: 72.1
+S8:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 256.8
+S:
+  enthalpy: 278.81
+  free-energy: 238.25
+  entropy: 167.82
+SO2:
+  enthalpy: -296.83
+  free-energy: -300.1
+  entropy: 248.2
+SO3:
+  enthalpy: -395.72
+  free-energy: -371.06
+  entropy: 256.76
+H2SO4:
+  enthalpy: -813.989
+  free-energy: 690.0
+  entropy: 156.9
+SF4:
+  enthalpy: -728.43
+  free-energy: -684.84
+  entropy: 291.12
+SF6:
+  enthalpy: -1220.5
+  free-energy: -1116.5
+  entropy: 291.5
+S2Cl2:
+  enthalpy: -19.5
+  free-energy: -29.25
+  entropy: 319.45
+SOCl2:
+  enthalpy: -212.55
+  free-energy: -198.32
+  entropy: 309.66
+SO2Cl2:
+  enthalpy: -354.8
+  free-energy: -310.45
+  entropy: 311.83
+Sn:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 51.2
+SnO:
+  enthalpy: -285.8
+  free-energy: -256.9
+  entropy: 56.5
+SnO2:
+  enthalpy: -577.6
+  free-energy: -515.8
+  entropy: 49.0
+SnCl4:
+  enthalpy: -511.3
+  free-energy: -440.1
+  entropy: 258.6
+Ti:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 30.7
+TiO2:
+  enthalpy: -944.0
+  free-energy: -888.8
+  entropy: 50.6
+TiCl4:
+  enthalpy: -804.2
+  free-energy: -737.2
+  entropy: 252.4
+W:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 32.6
+WO3:
+  enthalpy: -842.9
+  free-energy: -764.0
+  entropy: 75.9
+Zn:
+  enthalpy: 0.0
+  free-energy: 0.0
+  entropy: 41.6
+ZnO:
+  enthalpy: -350.5
+  free-energy: -320.5
+  entropy: 43.7
+ZnCl2:
+  enthalpy: -415.1
+  free-energy: -369.43
+  entropy: 111.5
+ZnS:
+  enthalpy: -206.0
+  free-energy: -201.3
+  entropy: 57.7
+ZnSO4:
+  enthalpy: -982.8
+  free-energy: -871.5
+  entropy: 110.5
+ZnCO3:
+  enthalpy: -812.78
+  free-energy: -731.57
+  entropy: 82.42
