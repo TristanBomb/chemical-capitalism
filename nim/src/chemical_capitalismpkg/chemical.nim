@@ -106,10 +106,9 @@ proc `$`*(x: Chemical): string =
                 return "($#)$#" % [$(e[0]), e[1].toSubscript()]
         ).foldl("$#$#" % [a, b])
 proc stringToChemical*(s: string): string =
-    let pegGrammar = peg("""
-    Chemical <- ('(' Chemical ')' \d* / Element*)*
-    Element <- [A-Z][a-z]?[a-z]?\d*
-    """)
+    #let pegGrammar = peg"""Chemical <- (('(' Chemical ')' \d*) / Element*)*
+#Element <- [A-Z][a-z]?[a-z]?\d*"""
+    let pegGrammar = peg"a <- '3'"
     if s =~ pegGrammar:
         return "my matches: "& matches.repr
     else:
@@ -180,6 +179,6 @@ when isMainModule:
             (createChemical(@[elemChem(O,2)]), 1)
         ]
     ))
-    stringToChemical("CoOF3")
-    stringToChemical("FOO8OOOF(FOOF(FOF(FOOP)3))")
-    stringToChemical("??????????")
+    echo stringToChemical("CoOF3")
+    echo stringToChemical("FOO8OOOF(FOOF(FOF(FOOP)3))")
+    echo stringToChemical("??????????")

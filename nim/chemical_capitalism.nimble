@@ -10,6 +10,7 @@ srcDir = "src"
 
 requires "nim >= 0.17.2"
 requires "unicode_numbers"
+requires "regex"
 
 bin = @["chemical_capitalism"]
 backend = "js"
