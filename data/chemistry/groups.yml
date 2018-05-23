@@ -1,0 +1,136 @@
+Hg2:
+    count: 2
+    name: Dimercury
+    charge: 2
+NH4:
+    count: 5
+    name: Ammonium
+    charge: 1
+C2H3O2:
+    count: 7
+    name: Acetate
+    charge: -1
+CO3:
+    count: 4
+    name: Carbonate
+    charge: -2
+C2O4:
+    count: 6
+    name: Oxalate
+    charge: -2
+HCO3:
+    count: 5
+    name: Biarbonate
+    charge: -1
+CN:
+    count: 2
+    name: Cyanide
+    charge: -1
+SCN:
+    count: 2
+    name: Thiocyanide
+    charge: -1
+NO3:
+    count: 4
+    name: Nitrate
+    charge: -1
+NO2:
+    count: 3
+    name: Nitrite
+    charge: -1
+OH:
+    count: 2
+    name: Hydroxide
+    charge: -1
+O2:
+    count: 2
+    name: Peroxide
+    charge: -2
+SO4:
+    count: 5
+    name: Sulfate
+    charge: -2
+S2O3:
+    count: 5
+    name: Thiosulfate
+    charge: -2
+SO3:
+    count: 4
+    name: Sulfite
+    charge: -2
+HSO4:
+    count: 5
+    name: Bisulfate
+    charge: -1
+PO4:
+    count: 5
+    name: Phosphate
+    charge: -3
+PO3:
+    count: 4
+    name: Phosphite
+    charge: -3
+ClO4:
+    count: 5
+    name: Perchlorate
+    charge: -1
+ClO3:
+    count: 4
+    name: Chlorate
+    charge: -1
+ClO2:
+    count: 3
+    name: Chlorite
+    charge: -1
+ClO:
+    count: 2
+    name: Hypochlorite
+    charge: -1
+IO4:
+    count: 5
+    name: Periodate
+    charge: -1
+IO3:
+    count: 4
+    name: Iodate
+    charge: -1
+IO2:
+    count: 3
+    name: Iodite
+    charge: -1
+IO:
+    count: 2
+    name: Hypoiodite
+    charge: -1
+BrO4:
+    count: 5
+    name: Perbromate
+    charge: -1
+BrO3:
+    count: 4
+    name: Bromate
+    charge: -1
+BrO2:
+    count: 3
+    name: Bromite
+    charge: -1
+BrO:
+    count: 2
+    name: Hypobromite
+    charge: -1
+AsO4:
+    count: 5
+    name: Arsenate
+    charge: -3
+CrO4:
+    count: 5
+    name: Chromate
+    charge: -2
+Cr2O7:
+    count: 9
+    name: Dichromate
+    charge: -2
+MnO4:
+    count: 5
+    name: Permanganate
+    charge: -1

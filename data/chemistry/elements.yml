@@ -1,0 +1,376 @@
+H:
+    z: 1
+    name: Hydrogen
+    charge: [-1, 1]
+He:
+    z: 2
+    name: Helium
+    charge: []
+Li:
+    z: 3
+    name: Lithium
+    charge: [1]
+Be:
+    z: 4
+    name: Beryllium
+    charge: [2]
+B:
+    z: 5
+    name: Boron
+    charge: [3]
+C:
+    z: 6
+    name: Carbon
+    charge: [-4,4]
+N:
+    z: 7
+    name: Nitrogen
+    charge: [-3]
+O:
+    z: 8
+    name: Oxygen
+    charge: [-2]
+F:
+    z: 9
+    name: Fluorine
+    charge: [-1]
+Ne:
+    z: 10
+    name: Neon
+    charge: []
+Na:
+    z: 11
+    name: Sodium
+    charge: [1]
+Mg:
+    z: 12
+    name: Magnesium
+    charge: [2]
+Al:
+    z: 13
+    name: Aluminium
+    charge: [3]
+Si:
+    z: 14
+    name: Silicon
+    charge: [-4, 4]
+P:
+    z: 15
+    name: Phosphorus
+    charge: [-3]
+S:
+    z: 16
+    name: Sulfur
+    charge: [-2]
+Cl:
+    z: 17
+    name: Chlorine
+    charge: [-1]
+Ar:
+    z: 18
+    name: Argon
+    charge: []
+K:
+    z: 19
+    name: Potassium
+    charge: [1]
+Ca:
+    z: 20
+    name: Calcium
+    charge: [2]
+Sc:
+    z: 21
+    name: Scandium
+    charge: [3]
+Ti:
+    z: 22
+    name: Titanium
+    charge: [4]
+V:
+    z: 23
+    name: Vanadium
+    charge: [2,3,4,5]
+Cr:
+    z: 24
+    name: Chromium
+    charge: [2,3,6]
+Mn:
+    z: 25
+    name: Manganese
+    charge: [2,3,4,6,7]
+Fe:
+    z: 26
+    name: Iron
+    charge: [2,3]
+Co:
+    z: 27
+    name: Cobalt
+    charge: [2,3]
+Ni:
+    z: 28
+    name: Nickel
+    charge: [2]
+Cu:
+    z: 29
+    name: Copper
+    charge: [1,2]
+Zn:
+    z: 30
+    name: Zinc
+    charge: [2]
+Ga:
+    z: 31
+    name: Gallium
+    charge: [1,3]
+Ge:
+    z: 32
+    name: Germanium
+    charge: [2,4]
+As:
+    z: 33
+    name: Arsenic
+    charge: [-3,3,6]
+Se:
+    z: 34
+    name: Selenium
+    charge: [-2]
+Br:
+    z: 35
+    name: Bromine
+    charge: [-1]
+Kr:
+    z: 36
+    name: Krypton
+    charge: []
+Rb:
+    Z: 37
+    name: Rubidium
+    charge: [1]
+Sr:
+    z: 38
+    name: Strontium
+    charge: [2]
+Y:
+    z: 39
+    name: Yttrium
+    charge: [3]
+Zr:
+    z: 40
+    name: Zirconium
+    charge: [4]
+Nb:
+    z: 41
+    name: Niobium
+    charge: [5]
+Mo:
+    z: 42
+    name: Molybdenum
+    charge: [3,4,6]
+Tc:
+    z: 43
+    name: Technetium
+    charge: [3,7]
+Ru:
+    z: 44
+    name: Ruthenium
+    charge: [3,4]
+Rh:
+    z: 45
+    name: Rhodium
+    charge: [1,3]
+Pd:
+    z: 46
+    name: Palladium
+    charge: [2,4]
+Ag:
+    z: 47
+    name: Silver
+    charge: [1]
+Cd:
+    z: 48
+    name: Cadmium
+    charge: [2]
+In:
+    z: 49
+    name: Indium
+    charge: [3]
+Sn:
+    z: 50
+    name: Tin
+    charge: [2,4]
+Sb:
+    z: 51
+    name: Antimony
+    charge: [3,5]
+Te:
+    z: 52
+    name: Tellurium
+    charge: [2,4,6]
+I:
+    z: 53
+    name: Iodine
+    charge: [-1]
+Xe:
+    z: 54
+    name: Xenon
+    charge: []
+Cs:
+    z: 55
+    name: Cesium
+    charge: [1]
+Ba:
+    z: 56
+    name: Barium
+    charge: [2]
+La:
+    z: 57
+    name: Lanthanum
+    charge: [3]
+Ce:
+    z: 58
+    name: Cerium
+    charge: [3,4]
+Pr:
+    z: 59
+    name: Praseodymium
+    charge: [3]
+Nd:
+    z: 60
+    name: Neodymium
+    charge: [3]
+Pm:
+    z: 61
+    name: Promethium
+    charge: [3]
+Sm:
+    z: 62
+    name: Samarium
+    charge: [2,3]
+Eu:
+    z: 63
+    name: Europium
+    charge: [2,3]
+Gd:
+    z: 64
+    name: Gadolinium
+    charge: [3]
+Tb:
+    z: 65
+    name: Terbium
+    charge: [3]
+Dy:
+    z: 66
+    name: Dysprosium
+    charge: [3]
+Ho:
+    z: 67
+    name: Holmium
+    charge: [3]
+Er:
+    z: 68
+    name: Erbium
+    charge: [2,3]
+Tm:
+    z: 69
+    name: Thulium
+    charge: [3]
+Yb:
+    z: 70
+    name: Ytterbium
+    charge: [2,3]
+Lu:
+    z: 71
+    name: Lutetium
+    charge: [3]
+Hf:
+    z: 72
+    name: Hafnium
+    charge: [3,4]
+Ta:
+    z: 73
+    name: Tantalum
+    charge: [3,5]
+W:
+    z: 74
+    name: Tungsten
+    charge: [4,6]
+Re:
+    z: 75
+    name: Rhenium
+    charge: [4,7]
+Os:
+    z: 76
+    name: Osmium
+    charge: [2,3,4,8]
+Ir:
+    z: 77
+    name: Iridium
+    charge: [3,4]
+Pt:
+    z: 78
+    name: Platinum
+    charge: [2,4]
+Au:
+    z: 79
+    name: Gold
+    charge: [1,3]
+Hg:
+    z: 80
+    name: Mercury
+    charge: [2]
+Tl:
+    z: 81
+    name: Thallium
+    charge: [1,3]
+Pb:
+    z: 82
+    name: Lead
+    charge: [2,4]
+Bi:
+    z: 83
+    name: Bismuth
+    charge: [3,5]
+Po:
+    z: 84
+    name: Polonium
+    charge: [2,4]
+At:
+    z: 85
+    name: Astatine
+    charge: [-1,1]
+Rn:
+    z: 86
+    name: Radon
+    charge: []
+Fr:
+    z: 87
+    name: Francium
+    charge: [1]
+Ra:
+    z: 88
+    name: Radium
+    charge: [2]
+Ac:
+    z: 89
+    name: Actinium
+    charge: [3]
+Th:
+    z: 90
+    name: Thorium
+    charge: [4]
+Pa:
+    z: 91
+    name: Protactinium
+    charge: [5]
+U:
+    z: 92
+    name: Uranium
+    charge: [3,4,6]
+Np:
+    z: 93
+    name: Neptunium
+    charge: [5]
+Pu:
+    z: 94
+    name: Plutonium
+    charge: [4]
