@@ -106,7 +106,7 @@ proc `$`*(x: Chemical): string =
                 return "($#)$#" % [$(e[0]), e[1].toSubscript()]
         ).foldl("$#$#" % [a, b])
 proc stringToChemical*(s: string): string =
-    let pegGrammar = term("""
+    let pegGrammar = peg("""
     Chemical <- ('(' Chemical ')' \d* / Element*)*
     Element <- [A-Z][a-z]?[a-z]?\d*
     """)
