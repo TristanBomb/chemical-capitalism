@@ -30,9 +30,9 @@ type
         charge*: seq[int]
         name*: ElementName
         fullName*: string
-proc elementInfo(charge: seq[int], name: ElementName, fullName: string): ElementInfo =
+proc elementInfo*(charge: seq[int], name: ElementName, fullName: string): ElementInfo =
     return ElementInfo(charge: charge, name: name, fullName: fullName)
-proc getElementInfo(n: ElementName): ElementInfo =
+proc getElementInfo*(n: ElementName): ElementInfo =
     case n:
         of H:
             return elementInfo(@[1, -1], H, "Hydrogen")
@@ -70,9 +70,9 @@ type
         name*: ElementName
         count*: Positive
         info*: ElementInfo
-proc createElement(name: ElementName): Element =
+proc createElement*(name: ElementName): Element =
     return Element(name: name, count: 1, info: name.getElementInfo())
-proc createElement(name: ElementName, count: Positive): Element =
+proc createElement*(name: ElementName, count: Positive): Element =
     return Element(name: name, count: count, info: name.getElementInfo())
 
 
@@ -81,15 +81,15 @@ type
     Chemical* = object
         elements*: seq[Either[Element, (Chemical, Positive)]]
     ElementQuantities* = TableRef[ElementName, int]
-proc createChemical(elements: seq[Either[Element, (Chemical, Positive)]]): Chemical =
+proc createChemical*(elements: seq[Either[Element, (Chemical, Positive)]]): Chemical =
     return Chemical(elements: elements)
-proc elemChem(eC: ElementName): Either[Element, (Chemical, Positive)] =
+proc elemChem*(eC: ElementName): Either[Element, (Chemical, Positive)] =
     return Left[Element, (Chemical, Positive)](createElement(eC))
-proc elemChem(eC: ElementName, n: Positive): Either[Element, (Chemical, Positive)] =
+proc elemChem*(eC: ElementName, n: Positive): Either[Element, (Chemical, Positive)] =
     return Left[Element, (Chemical, Positive)](createElement(eC, n))
-proc elemChem(eC: Chemical, n: Positive): Either[Element, (Chemical, Positive)] =
+proc elemChem*(eC: Chemical, n: Positive): Either[Element, (Chemical, Positive)] =
     return Right[Element, (Chemical, Positive)]((eC, n))
-proc `$`(x: Chemical): string =
+proc `$`*(x: Chemical): string =
     return
         x
         .elements
@@ -105,15 +105,15 @@ proc `$`(x: Chemical): string =
                 let e = elemChem.right
                 return "($#)$#" % [$(e[0]), e[1].toSubscript()]
         ).foldl("$#$#" % [a, b])
-proc stringToChemical(s: string) = 
+proc stringToChemical*(s: string): string =
     let pegGrammar = term("""
     Chemical <- ('(' Chemical ')' \d* / Element*)*
     Element <- [A-Z][a-z]?[a-z]?\d*
     """)
     if s =~ pegGrammar:
-        echo "my matches: ", matches
+        return "my matches: "& matches.repr
     else:
-        echo "no matches"
+        return "no matches"
 proc getElementQuantities(c: Chemical): ElementQuantities =
     let quantityTable = newTable[ElementName, int]()
     for _, elemChem in c.elements.pairs():
@@ -149,13 +149,13 @@ proc isBalanced(reaction: Reaction): bool =
         if count != 0:
             return false
     return true;
-proc createReaction(reactants: openArray[(Chemical, int)], products: openArray[(Chemical, int)]): Option[Reaction] =
+proc createReaction*(reactants: openArray[(Chemical, int)], products: openArray[(Chemical, int)]): Option[Reaction] =
     let r: Reaction = Reaction(reactants: @reactants, products: @products)
     if not r.isBalanced():
         return none(Reaction)
     return some(r)
 
-proc `$`(x: Reaction): string =
+proc `$`*(x: Reaction): string =
     let
         reactantString: string =
             x

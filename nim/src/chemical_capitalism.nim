@@ -57,3 +57,15 @@ proc `$`(x: GameState): string =
 when isMainModule:
     let state: GameState = GameState(money: newMoney(), energy: newEnergy(), science: newScience(), elements: newElements())
     window.alert($state)
+    window.alert($createReaction(
+        [
+            (createChemical(@[elemChem(C), elemChem(O,2)]), 2)
+        ],
+        [
+            (createChemical(@[elemChem(C), elemChem(O)]), 2),
+            (createChemical(@[elemChem(O,2)]), 1)
+        ]
+    ))
+    window.alert(stringToChemical("CoOF3"))
+    window.alert(stringToChemical("FOO8OOOF(FOOF(FOF(FOOP)3))"))
+    window.alert(stringToChemical("??????????"))
